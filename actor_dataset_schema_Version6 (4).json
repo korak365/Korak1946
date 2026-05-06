@@ -1,0 +1,29 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["audioId", "audioName", "usageEstimate", "url"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "audioName": {
+                        "label": "Audio name",
+                        "format": "text"
+                    },
+                    "url": {
+                        "label": "URL",
+                        "format": "link"
+                    },
+                    "usageEstimate": {
+                        "label": "Usage estimate",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

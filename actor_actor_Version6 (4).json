@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "name": "1",
+    "title": "Instagram Reels Music Trends",
+    "description": "Tracks which Instagram Reels audio clips are going viral before they peak.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "ai-generated-actor",
+        "generatedBy": "gpt-4o"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

@@ -1,0 +1,56 @@
+{
+    "title": "Input schema of the Instagram Reels Music Trends",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "Reels feeds, hashtag pages, or profile pages to start scraping (public or authenticated).",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://www.instagram.com/explore/tags/music/"
+                }
+            ]
+        },
+        "maxRequestsPerCrawl": {
+            "title": "Max Requests per Crawl",
+            "type": "integer",
+            "description": "Maximum number of requests that can be made by this crawler per run.",
+            "default": 200
+        },
+        "authMethod": {
+            "title": "Authentication method",
+            "type": "string",
+            "description": "Set to 'cookie' to provide a cookie string, 'credentials' for username/password login, or 'none' for unauthenticated scraping (limited).",
+            "default": "none",
+            "enum": ["none", "cookie", "credentials"]
+        },
+        "cookieString": {
+            "title": "Cookie string",
+            "type": "string",
+            "description": "If authMethod is 'cookie', paste your Instagram session cookie here (keep secret, use env vars on Cloud).",
+            "default": ""
+        },
+        "username": {
+            "title": "Username",
+            "type": "string",
+            "description": "Username for credentials-based login (if authMethod is 'credentials').",
+            "default": ""
+        },
+        "password": {
+            "title": "Password",
+            "type": "string",
+            "description": "Password for credentials-based login (if authMethod is 'credentials').",
+            "default": ""
+        },
+        "dedupe": {
+            "title": "Deduplicate audio clips",
+            "type": "boolean",
+            "description": "If true, the Actor stores seen audio IDs in Key-Value store and only outputs newly discovered clips.",
+            "default": true
+        }
+    },
+    "required": []
+}
